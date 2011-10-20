@@ -1,4 +1,5 @@
-require 'em-http'
+require 'em-synchrony'
+require 'em-synchrony/em-http'
 require 'em-http/version'
 
 module Faye
