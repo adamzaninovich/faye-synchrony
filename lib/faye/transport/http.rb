@@ -25,9 +25,9 @@ module Faye
         options = {   # for em-http-request >= 1.0
           :inactivity_timeout => 0,    # connection inactivity (post-setup) timeout (0 = disable timeout)
         }
-        request = EventMachine::HttpRequest.new(@endpoint, options).post(params)
+        request = EventMachine::HttpRequest.new(@endpoint, options).apost(params)
       else
-        request = EventMachine::HttpRequest.new(@endpoint).post(params)
+        request = EventMachine::HttpRequest.new(@endpoint).apost(params)
       end
       request.callback do
         begin
